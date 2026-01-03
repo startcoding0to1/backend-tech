@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Load properties -->
+    <context:property-placeholder location="classpath:application.properties"/>
+    <bean id="xml_HelloWorld" class="com.startcoding0to1.xmlbased.util.XML_HelloWorld">
+        <constructor-arg value="${spring.test.no}"/>
+        <property name="message" value="${spring.application.name}"/>
+    </bean>
+    <context:component-scan base-package="com.startcoding0to1.xmlbased"/>
+</beans>
