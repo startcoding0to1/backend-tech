@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://khadargari_db_user:Mongouser@khairuddinscluster.gf3mxc1.mongodb.net/spring_security?retryWrites=true&w=majority
+      uri: ${MONGO_URI}
       auto-index-creation: true
 
 logging:
