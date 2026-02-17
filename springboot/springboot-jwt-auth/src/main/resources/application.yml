@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://khadargari_db_user:Mongouser@khairuddinscluster.gf3mxc1.mongodb.net/spring_security?retryWrites=true&w=majority
+      auto-index-creation: true
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          context:
+            config: DEBUG
+#  security:
+#    user:
+#      name: user
+#      password: user
+
+server:
+  port: 8081
+  application:
+    name: springboot-jwt-auth
+
+jwt:
+  secret: ${JWT_SECRET}
